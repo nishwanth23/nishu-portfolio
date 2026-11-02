@@ -1651,7 +1651,7 @@ section[id] { scroll-margin-top: 112px; }
   transform: scale(0);
   animation: button-ripple .62s ease-out forwards;
 }
-.magnetic-control > * { position: relative; z-index: 1; }
+.magnetic-control > :not(.button-ripple) { position: relative; z-index: 1; }
 @keyframes button-ripple { to { opacity: 0; transform: scale(1); } }
 .motion-ready [data-motion] {
   filter: blur(14px);
