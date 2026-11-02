@@ -79,6 +79,7 @@ const serviceIcons = {
   VPC: Network,
   S3: HardDrive,
   RDS: Database,
+  IAM: ShieldCheck,
   Aurora: DatabaseZap,
   DynamoDB: Table2,
   'Azure VMs': MonitorCog,
@@ -106,7 +107,7 @@ const serviceIcons = {
 }
 
 const awsServices = new Set([
-  'AWS', 'AWS CLI', 'EC2', 'ECS', 'VPC', 'S3', 'RDS', 'Aurora', 'DynamoDB', 'EKS',
+  'AWS', 'AWS CLI', 'EC2', 'ECS', 'VPC', 'S3', 'RDS', 'IAM', 'Aurora', 'DynamoDB', 'EKS',
   'AWS CodePipeline', 'CodeDeploy', 'CloudWatch', 'Route 53', 'AWS AppConfig',
   'Secrets Manager', 'KMS',
 ])
@@ -689,7 +690,7 @@ export default function Home() {
           <div className="section-title experience-title" data-motion="left">
             <span className="eyebrow">03 / Experience</span>
             <h2>Built and supported in production.</h2>
-            <p>Three years across cloud infrastructure, delivery automation, containers, and live operations.</p>
+            <p>3.4 years across cloud infrastructure, delivery automation, containers, and live operations.</p>
             <a className="text-link" href="/Bonagiri-Sai-Nishwanth-Resume.pdf" download>Full resume <ArrowDownRight size={16} /></a>
           </div>
           <div className="timeline">
@@ -705,6 +706,18 @@ export default function Home() {
                 <ul>{job.points.map((point) => <li key={point}>{point}</li>)}</ul>
               </article>
             ))}
+            <article className="job-card" data-motion="right">
+              <span className="timeline-dot" />
+              <div className="job-head">
+                <div>
+                  <span className="job-index">Education</span>
+                  <h3>{profile.education.degree}</h3>
+                  <p>{profile.education.college} · {profile.education.university}</p>
+                </div>
+                <time>{profile.education.year}</time>
+              </div>
+              <p className="job-summary">GPA: {profile.education.gpa}</p>
+            </article>
           </div>
         </div>
       </section>
