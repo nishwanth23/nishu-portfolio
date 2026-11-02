@@ -135,9 +135,9 @@ const deliveryFlow = [
 
 const productionProof = [
   { value: 'IaC', label: 'Multi-environment AWS', detail: 'Terraform-managed foundations' },
-  { value: 'OIDC', label: 'Keyless cloud access', detail: 'No long-lived CI credentials' },
+  { value: 'OIDC', label: 'Secure AWS authentication', detail: 'OIDC-based workflows' },
   { value: 'B/G', label: 'Safer production releases', detail: 'Blue-green with rollback' },
-  { value: '24/7', label: 'Operational visibility', detail: 'Dashboards, alerts, incidents' },
+  { value: '24/7', label: 'Production support', detail: 'Troubleshooting and L2 support' },
 ]
 
 const crystalDots = Array.from({ length: 14 }, (_, index) => index)
@@ -159,11 +159,11 @@ const workStories = [
   {
     number: '02',
     eyebrow: 'Release engineering',
-    title: 'Secure delivery with automated recovery',
-    copy: 'Automated CI/CD with GitHub Actions and OIDC-based AWS authentication, then implemented blue-green releases and automated rollback with CodeDeploy.',
+    title: 'Secure delivery with rollback workflows',
+    copy: 'Automated build and deployment workflows with GitHub Actions and secure OIDC-based AWS authentication, plus blue-green deployments and rollback workflows using AWS CodeDeploy.',
     scope: 'Application release lifecycle',
     ownership: 'Pipeline + deployment automation',
-    tags: ['GitHub Actions', 'OIDC', 'CodeDeploy', 'Automated rollback'],
+    tags: ['GitHub Actions', 'OIDC', 'CodeDeploy', 'Rollback workflows'],
     Icon: GitBranch,
   },
   {
@@ -690,7 +690,7 @@ export default function Home() {
           <div className="section-title experience-title" data-motion="left">
             <span className="eyebrow">03 / Experience</span>
             <h2>Built and supported in production.</h2>
-            <p>3.4 years across cloud infrastructure, delivery automation, containers, and live operations.</p>
+            <p>3+ years across cloud infrastructure, delivery automation, containers, and live operations.</p>
             <a className="text-link" href="/Bonagiri-Sai-Nishwanth-Resume.pdf" download>Full resume <ArrowDownRight size={16} /></a>
           </div>
           <div className="timeline">
